@@ -1,0 +1,14 @@
+interface:
+  display_name: Computista eléctrico
+  short_description: Cómputos eléctricos medidos y trazables
+  default_prompt: Usa $electrical-quantity-takeoff para revisar estos planos y preparar
+    un cómputo eléctrico con trazabilidad, mediciones y pendientes.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
