@@ -1,0 +1,18 @@
+{
+  "schema": "eqt/1",
+  "example_notice": "SINTÉTICO. Sustituir IDs y hashes por los del índice real. No contiene cantidades de un proyecto de referencia.",
+  "documents": {
+    "DOCUMENT_ID": {"sha256": "SOURCE_SHA256", "family": "IE-01-PB", "revision": "R01", "status": "approved", "evidence": "Revisión elegida para este alcance por el usuario"}
+  },
+  "calibrations": [
+    {"id": "escala-pb", "page_id": "PAGE_ID", "source_sha256": "SOURCE_SHA256", "p1": [40, 200], "p2": [140, 200], "real_distance": 10, "unit": "m", "region": [0, 0, 300, 300], "status": "approved", "evidence": "Cota sintética conocida de 10 m entre los puntos indicados"}
+  ],
+  "selections": [
+    {"id": "ruta-1", "kind": "length", "system": "bandejas", "sector": "A", "level": "PB", "circuit": "TG-TS1", "material_key": "bandeja-200x50", "specification": "200 x 50 mm", "description": "Recorrido bandeja sector A", "unit": "m", "source_refs": ["PATH_REFERENCE_ID"], "calibration_id": "escala-pb", "installation_route_verified": true, "status": "approved", "evidence": "Recorrido sintético verificado"}
+  ],
+  "rules": [
+    {"id": "fase-1", "basis_id": "ruta-1", "kind": "conductor", "description": "Conductores de fase según unifilar sintético", "system": "alimentadores", "material_key": "cu-35-fase", "specification": "Cu 35 mm2; aislamiento definido en unifilar", "unit": "m", "formula": "(L+vertical+reserve)*count*(1+waste)", "variables": {"count": 3, "vertical": 0, "reserve": 0, "waste": 0}, "variable_units": {"count": "u", "vertical": "m", "reserve": "m", "waste": "1"}, "conditions": {"system": "bandejas"}, "source": "Unifilar sintético y criterio explícito sin reserva", "version": "1", "status": "approved", "evidence": "Ejemplo de regla; no usar para dimensionar instalaciones"}
+  ],
+  "identity_resolutions": [],
+  "comparisons": []
+}
